@@ -13,7 +13,6 @@
 !/log/.keep
 !/tmp/.keep
 
-/config/database.yml
 /log/development.log
 
 Gemfile.lock
