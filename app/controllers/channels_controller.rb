@@ -9,7 +9,7 @@ class ChannelsController < ApplicationController
       if @channel.save
         format.json { render :show, status: :created }
       else
-        format.json { resnder json: @channel.errors, status: :unprocessable_entity}
+        format.json { render json: @channel.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -35,6 +35,6 @@ class ChannelsController < ApplicationController
   end
 
   def channel_params
-    params.require(:channel).permit(:sllug, :team_id).merge(user: current_user)
+    params.require(:channel).permit(:slug, :team_id).merge(user: current_user)
   end
 end
